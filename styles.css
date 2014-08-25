@@ -1,0 +1,69 @@
+@font-face {
+	font-family: 'Ubuntu Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url(http://fonts.gstatic.com/s/ubuntumono/v5/ViZhet7Ak-LRXZMXzuAfkYbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+@font-face {
+	font-family: 'Ubuntu Mono';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Ubuntu Mono Bold'), local('UbuntuMono-Bold'), url(http://fonts.gstatic.com/s/ubuntumono/v5/ceqTZGKHipo8pJj4molytjqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+}
+
+@keyframes caret {
+	from {
+		background: white;
+		color: black;
+	}
+	49% {
+		background: black;
+		color: white;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0 0;
+	padding: 0 0;
+	border: 0px none;
+}
+
+html {
+	background: black;
+	width: 100%;
+	height: 100%;
+}
+
+body, pre {
+	color: white;
+	font-size: 25px;
+}
+
+#output {
+	font-family: "Ubuntu Mono";
+}
+
+#input {
+	position: relative;
+	bottom: 0;
+	font-family: "Ubuntu Mono";
+}
+
+#input * {
+	float: left;
+}
+
+#inBox {
+	opacity: 0;
+}
+
+.caret {
+	animation-name: caret;
+	animation-duration: 1s;
+	animation-timing-function: steps(1, end);
+	animation-iteration-count: infinite;
+	display: inline-block;
+	width: .5em;
+	height: .9em;
+}
